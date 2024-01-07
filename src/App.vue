@@ -1,31 +1,28 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import LuckyDraw from './components/LuckyDraw.vue'
 </script>
 
 <template>
-  <div>
-		test
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+	<v-container class="contentContainer">
+		<LuckyDraw></LuckyDraw>
+	</v-container>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.contentContainer {
+	width: 900px;
+	height: 100%;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+@media screen and (max-width: 960px) {
+	.contentContainer {
+		max-width: 800px;
+	}
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+@media screen and (max-width: 600px) {
+	.contentContainer {
+		max-width: 560px;
+	}
 }
 </style>
